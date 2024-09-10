@@ -1,0 +1,22 @@
+#---------------------------------------------------------------
+# GOWIN LICENSE
+#
+# Copyright (C) GOWINSEMI Corp.
+#
+# CREATED AT: 2024-09-10T09:18:47
+# GRANT TO: gowin
+#
+# WARNING: This file must not be edited in any way.
+#---------------------------------------------------------------
+
+MODE = NODELOCK
+TYPE = STD
+HOST_ID = E073E7BDBAE6
+EXP_DATE = 2025-09-10
+
+-------------------------- BEGIN SIGN --------------------------
+7deaaacb50a35dfdb9023e90a41159f6ffe49fcb674df332612fd2e2b7cba2fd
+2985d20d7e9967ba6c93269043a3409ee716e564b99d3fa935ac0bd24bc587b8
+30a47e3302fe22c79ad64e649faf75b2deecb3b84064033a028c75cc79b5a9a9
+c75bc182cd35f70e3ea93234dca638ec3efb37bb109940f74d4d9cf8d6dd54c0
+--------------------------- END SIGN ---------------------------
