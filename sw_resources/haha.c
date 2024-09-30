@@ -152,8 +152,8 @@ void haha_uart_print_u8_hex(uint8_t num) {
 
 void haha_uart_print_u16_hex(uint16_t num) {
   uint8_t byte;
-  for (int i = 0; i < 4; i++) {
-    byte = (num >> (8 * (3 - i))) & 0xFF;
+  for (int i = 0; i < 2; i++) {
+    byte = (num >> (8 * (1 - i))) & 0xFF;
     haha_uart_print_u8_hex(byte);
   }
 }
