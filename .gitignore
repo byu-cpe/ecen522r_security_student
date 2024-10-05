@@ -4,3 +4,4 @@ impl
 *.pyc
 *.o
 *.elf
+*.npy
