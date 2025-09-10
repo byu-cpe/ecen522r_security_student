@@ -9,7 +9,7 @@
 #define HAHA_H
 
 #include "avr_compiler.h"
-// #include "spi_driver.h" // Uncomment if using SPI
+#include "spi_driver.h" // Uncomment if using SPI
 #include <avr/io.h>
 
 /* Pin Definitions for Chip Interconnection - Refer to the HaHa Manual */
@@ -19,10 +19,10 @@
 #define HAHA_CLK_INTER_DELAY 25
 
 /* Function Prototypes */
-void haha_interBegin(void);
-void haha_clkInterPos(void);
-void haha_clkInterNeg(void);
-void haha_sendDataToFPGA(uint8_t data);
+void haha_inter_init(void);
+void haha_inter_clk_pos(void);
+void haha_inter_clk_neg(void);
+void haha_send_to_fpga(uint8_t data);
 
 void haha_uart_init();
 void haha_uart_print_char(char c);
@@ -55,6 +55,11 @@ SPI_Master_t spiMasterC;
 #define W25N_ss_en() SPI_MasterSSLow(&W25N_SS_PORT, W25N_SS_PIN)
 #define W25N_ss_di() SPI_MasterSSHigh(&W25N_SS_PORT, W25N_SS_PIN)
 
+struct haha_flash_device_id {
+  uint8_t manufacturer_id;
+  uint16_t device_id;
+};
+
 /* Pin Definitions for Flash HOLD_N pin/port */
 #define W25N_HOLD_N_PORT PORTE
 #define W25N_HOLD_N_PIN PIN1_bm
@@ -70,7 +75,8 @@ SPI_Master_t spiMasterC;
 #define MC3635_ss_di() SPI_MasterSSHigh(&MC3635_SS_PORT, MC3635_SS_PIN)
 
 /* Function Prototypes */
-void haha_v3_SPIBegin(void);
+void haha_spi_init(void);
+void haha_flash_init(void);
 
 #endif
 
