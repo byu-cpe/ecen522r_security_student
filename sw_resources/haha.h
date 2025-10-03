@@ -29,7 +29,9 @@ void haha_inter_clk_pos(void);
 // Lower the CM clock signals
 void haha_inter_clk_neg(void);
 
-// Set the 8-bit CM bus data lines to a given value
+// Send a byte of data to the FPGA by setting the 
+// value on the 8-bit CM bus data lines, and then
+// raising and lowering the clock signal
 void haha_send_to_fpga(uint8_t data);
 
 void haha_uart_init();
