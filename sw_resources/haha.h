@@ -19,9 +19,17 @@
 #define HAHA_CLK_INTER_DELAY 25
 
 /* Function Prototypes */
+
+// Initialize the 8-bit CM interconnect bus
 void haha_inter_init(void);
+
+// Raise the CM clock signals
 void haha_inter_clk_pos(void);
+
+// Lower the CM clock signals
 void haha_inter_clk_neg(void);
+
+// Set the 8-bit CM bus data lines to a given value
 void haha_send_to_fpga(uint8_t data);
 
 void haha_uart_init();
